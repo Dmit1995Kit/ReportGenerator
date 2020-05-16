@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layouts/layout}">
+<head>
+    <title>Home Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link th:href="@{/css/core.css}" rel="stylesheet" media="screen" />
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col" layout:fragment="content">
+            <div class="container-fluid" style="margin-top:80px">
+                  <h1>Hello user</h1>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

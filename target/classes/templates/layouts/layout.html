@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">YDA</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/b80c2c4f09.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div th:replace="fragments/header :: header"> This header content is going to be replaced.</div>
+<div class="container">
+    <div class="row">
+        <div class="col" layout:fragment="content">
+            <h1>This is the Layout's main section</h1>
+            <p>This is the main content placeholder. This content will be replaced if the page
+                using the layout also defines a layout:fragment="content" segment. </p>
+        </div>
+    </div>
+</div>
+<footer th:insert="fragments/footer :: footer" class="footer">
+    This content will remain, but other content will be inserted after it.
+</footer>
+</body>
+</html>
